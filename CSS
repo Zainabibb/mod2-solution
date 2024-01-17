@@ -1,1 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Header background color */
+    color: white; /* Header text color */
+}
+
+.section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FFD700; /* Set a unique color for section title region background */
+    color: black; /* Adjust text color for readability */
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .section {
+        width: 33.33%; /* Each section takes up equal space in the row */
+        float: left;
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 50%; /* Two sections side by side */
+        float: left;
+    }
+
+    .section:nth-child(3) {
+        width: 100%; /* Third section takes up entire row */
+        float: none;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes up the entire row */
+        float: none;
+    }
+}
 
